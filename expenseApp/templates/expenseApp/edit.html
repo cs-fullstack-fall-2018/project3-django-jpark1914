@@ -1,0 +1,11 @@
+{% extends 'expenseApp/base.html' %}
+{%block content %}
+
+<form method="post">
+    <p>What Would You Like To Change?</p>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Save</button>
+</form>
+
+{% endblock %}}

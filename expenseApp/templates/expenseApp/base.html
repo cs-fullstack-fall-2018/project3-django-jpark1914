@@ -1,0 +1,67 @@
+{# Testing here #}
+{% load static %}
+<link rel="stylesheet" href="{% static 'expenseApp/bootstrap.css' %}">
+<link rel="stylesheet" href="{% static 'expenseApp/css/index.css' %}">
+
+
+
+<div class="jumbotron">
+    <div class="row justify-content-center">
+        <h1> Welcome to the Memphis Non-Profit Page!</h1>
+    </div>
+    <div class="row justify-content-center">
+         <h2> Click Here to Learn About this Developer</h2>
+    </div>
+    <div class="row justify-content-center">
+
+    </ul>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center">
+        {% block content %} <!--Start Block-->
+
+        {% if user.is_authenticated %}
+        <h1>User: {{ user.get_username }}</h1>
+        <a href="{% url 'create' %}"><button class="btn btn-info">Add New Entry</button></a>
+        <a href="{% url 'logout' %}"><button class="btn btn-info">Log Out</button></a>
+
+        {% if user_account %} <!-- Start If -->
+
+
+
+
+        {% for item in user_account%} <!--Start For Loop -->
+
+        <a class="col-md-12" href="{%url 'detail' pk=item.pk%}"><h2>{{item.account_name}}</h2></a>
+        <h3 class="col-12">{{item.balance}}</h3>
+        <a href="{% url 'edit' pk=item.pk %}"><button class="btn btn-outline-danger">Edit Account Information?</button> </a>
+        <a href="{% url 'transaction' pk=item.pk %}"><button class="btn btn-outline-info">Transaction?</button> </a>
+        <hr/>
+        {% endfor %} <!-- End For Loop -->
+
+        {% endif %} <!--End 2nd If-->
+
+        {% else %}
+
+        Not logged in
+        <a href="{% url 'login'%}"><button type="button" class="btn btn-outline-danger">Click here to login again.</button> </a>
+        <a href="{% url 'newUser'%}"><button type="button" class="btn btn-outline-danger">Click here to login again.</button> </a>
+
+
+
+        {% endif %} <!-- End If -->
+
+        {% endblock %} <!-- End Block -->
+    </div>
+
+
+</div>
+
+
+
+
+
+
+<script src="{% static 'expenseApp/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static  'expenseApp/bootstrap.js' %}"></script>

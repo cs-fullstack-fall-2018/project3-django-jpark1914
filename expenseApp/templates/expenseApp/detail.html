@@ -1,0 +1,10 @@
+{% extends 'expenseApp/base.html' %}
+
+{% block content %}
+
+ <a href="{% url 'edit' pk=theModel.pk %}"><button class="btn-outline-danger btn">Edit</button></a>
+<h1>{{theModel.account_name}}</h1>
+<p>{{theModel.balance}}</p>
+<p>{{theModel.emergency_fund_status}}</p>
+
+{% endblock %}
