@@ -4,12 +4,20 @@ from django import forms
 class AccountForm(forms.ModelForm):
     class Meta:
         model = AccountModel
-        fields = ['account_name','balance','savings','date_of_balance']
+        fields = ['account_name','balance','savings','deposit', 'expense']
+        widgets = {'balance': forms.HiddenInput, 'savings':forms.HiddenInput(), 'deposit': forms.HiddenInput(), 'expense': forms.HiddenInput()}
 
-class TransactionForm(forms.ModelForm):
+
+class DepositForm(forms.ModelForm):
     class Meta:
-        model = TransactionModel
-        fields = ['amount']
+        model = AccountModel
+        fields = ['deposit','expense']
+        widgets = {'expense': forms.HiddenInput()}
+
+class ExpenseForm(forms.ModelForm):
+    class Meta:
+        model = AccountModel
+        fields = ['expense']
 
 
 class UserForm(forms.ModelForm):
@@ -18,5 +26,4 @@ class UserForm(forms.ModelForm):
         fields = ['name', 'email', 'password']
         widgets = {
             'password': forms.PasswordInput(),
-
         }

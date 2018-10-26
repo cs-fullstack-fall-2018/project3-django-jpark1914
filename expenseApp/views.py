@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import AccountModel, TransactionModel
-from .forms import AccountForm, UserForm
+from .forms import AccountForm, UserForm, DepositForm, ExpenseForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 
@@ -24,6 +24,48 @@ def create(request):
         form = AccountForm()
     return render(request, 'expenseApp/create.html', {'form': form})
 
+def deposit(request, pk):
+    theModel = get_object_or_404(AccountModel, pk=pk)
+    user_account = AccountModel.objects.all()
+    if request.method == 'POST':
+
+        form = DepositForm(request.POST, instance=theModel)
+        if form.is_valid():
+            changeForm = form.save(commit=False)
+            changeForm.username = request.user
+            dep_amt = (form.cleaned_data['deposit'])
+            exp_amt = 0
+            new_amt = (dep_amt - exp_amt)
+            changeForm.balance += new_amt
+            changeForm.save()
+            a = TransactionModel(id=None, amount= int(new_amt), transaction='DEPOSIT', account=changeForm)
+            a.save()
+            return redirect('index')
+    else:
+        form = DepositForm()
+    return render(request, 'expenseApp/deposit.html',{'form':form, 'user_account':user_account})
+
+def expense(request, pk):
+    theModel = get_object_or_404(AccountModel, pk=pk)
+    user_account = AccountModel.objects.all()
+    if request.method == 'POST':
+
+        form = ExpenseForm(request.POST, instance=theModel)
+        if form.is_valid():
+            changeForm = form.save(commit=False)
+            changeForm.username = request.user
+            dep_amt = 0
+            exp_amt = (form.cleaned_data['expense'])
+            new_amt = (dep_amt - exp_amt)
+            changeForm.balance += new_amt
+            changeForm.save()
+            a = TransactionModel(id=None, amount= int(new_amt), transaction='EXPENSE', account=changeForm)
+            a.save()
+            return redirect('index')
+    else:
+        form = ExpenseForm()
+    return render(request, 'expenseApp/expense.html',{'form':form, 'user_account':user_account})
+
 def edit(request, pk):
     theModel = get_object_or_404(AccountModel, pk=pk)
     user_account = AccountModel.objects.all()
@@ -33,49 +75,7 @@ def edit(request, pk):
         if form.is_valid():
             changeForm = form.save(commit=False)
             changeForm.username = request.user
-            dep_amt = (form.cleaned_data['deposit'])
-            exp_amt = (form.cleaned_data['expense'])
-            new_amt = (dep_amt - exp_amt)
-            changeForm.balance += new_amt
-            #
-            #
-            # changeForm.balance -= exp_amt
-
-            changeForm.deposit = 0
-            changeForm.expense = 0
             changeForm.save()
-             # ADD A TRANSACTION HISTORY RECORD
-            a = TransactionModel(id=None, amount= int(dep_amt), which_account='MAIN ACCOUNT', account=changeForm)
-            a.save()
-
-            return redirect('index')
-    else:
-        form = AccountForm(instance=theModel)
-    return render(request, 'expenseApp/edit.html',{'form':form, 'user_account':user_account})
-
-def transaction(request, pk):
-    theModel = get_object_or_404(AccountModel, pk=pk)
-    user_account = AccountModel.objects.all()
-    if request.method == 'POST':
-
-        form = AccountForm(request.POST, instance=theModel)
-        if form.is_valid():
-            changeForm = form.save(commit=False)
-            changeForm.username = request.user
-            dep_amt = (form.cleaned_data['deposit'])
-            exp_amt = (form.cleaned_data['expense'])
-            new_amt = (dep_amt - exp_amt)
-            changeForm.balance += new_amt
-            #
-            #
-            # changeForm.balance -= exp_amt
-
-            changeForm.deposit = 0
-            changeForm.expense = 0
-            changeForm.save()
-            # ADD A TRANSACTION HISTORY RECORD
-            a = TransactionModel(id=None, amount= int(dep_amt), which_account='MAIN ACCOUNT', account=changeForm)
-            a.save()
 
             return redirect('index')
     else:
@@ -84,7 +84,9 @@ def transaction(request, pk):
 
 def detail(request, pk):
     theModel = get_object_or_404(AccountModel, pk=pk)
-    return render(request, 'expenseApp/detail.html', {'theModel': theModel})
+    print(theModel)
+    transactions = TransactionModel.objects.filter(account=pk)
+    return render(request, 'expenseApp/detail.html', {'theModel': theModel, 'user_account': transactions})
 
 
 def newUser(request):

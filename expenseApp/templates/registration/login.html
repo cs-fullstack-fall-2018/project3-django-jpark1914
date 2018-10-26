@@ -1,32 +1,49 @@
-
-
-{% if form.errors %}
-<p>Your username and password didn't match. Please try again.</p>
-{% endif %}
-
-{% if next %}
-{% if user.is_authenticated %}
-<p>Your account doesn't have access to this page. To proceed,
-    please login with an account that has access.</p>
-{% else %}
-<p>Please login to see this page.</p>
-{% endif %}
-{% endif %}
-
-<form method="post" action="{% url 'login' %}">
-    {% csrf_token %}
-
-    <div>
-        <td>{{ form.username.label_tag }}</td>
-        <td>{{ form.username }}</td>
+{% extends 'expenseApp/base.html' %}
+{% block jumbotron %}
+<div class="jumbotron">
+    <div class="row justify-content-center">
+        <h1>Create A New User</h1>
     </div>
-    <div>
-        <td>{{ form.password.label_tag }}</td>
-        <td>{{ form.password }}</td>
+    <div class="row justify-content-center">
+        <a href="{% url 'newUser' %}"><button class=" btn btn-outline-success" >Create New User</button></a>
+    </div>
+</div>
+{% endblock %}
+{% block content %}
+<div class="containter">
+    <div class="row justify-content-center">
+    {% if form.errors %}
+        <p>Your username and password didn't match. Everything is case sensitive. Please try again.</p>
+    {% endif %}
+
+    {% if next %}
+    {% if user.is_authenticated %}
+        <p>Your account doesn't have access to this page. To proceed,
+        please login with an account that has access.</p>
+    {% else %}
+        <p>Please login to see this page.</p>
+    {% endif %}
+    {% endif %}
     </div>
 
-    <div>
-        <input type="submit" value="login" />
-        <input type="hidden" name="next" value="{{ next }}" />
+    <div class="row justify-content-center">
+        <form method="post" action="{% url 'login' %}">
+            {% csrf_token %}
+
+            <div>
+                <td>{{ form.username.label_tag }}</td>
+                <td>{{ form.username }}</td>
+            </div>
+            <div>
+                <td>{{ form.password.label_tag }}</td>
+                <td>{{ form.password }}</td>
+            </div>
+
+            <div>
+                <button class="btn btn-outline-success offset-6" type="submit" value="login">Log In</button>
+                <input type="hidden" name="next" value="{{ next }}" />
+            </div>
+        </form>
     </div>
-</form>
+</div>
+{% endblock %}}

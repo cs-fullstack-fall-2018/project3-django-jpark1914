@@ -2,18 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59694bea-bc52-40a2-851e-728bbc86c837" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/expenseApp/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/expenseApp/templates/registration/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/expense.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/templates/registration/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/expenseApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/expenseApp/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/project3_django_jpark1914$models.coverage" NAME="models Coverage Results" MODIFIED="1540407242495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/expenseApp" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-504718464">
@@ -22,14 +33,15 @@
           <entry key="project.closed" value="2" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.16" value="1" />
           <entry key="project.open.time.23" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="3" />
-          <entry key="html" value="12" />
+          <entry key="html" value="20" />
           <entry key="js" value="2" />
           <entry key="md" value="1" />
           <entry key="py" value="34" />
@@ -38,7 +50,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="3" />
-          <entry key="HTML" value="12" />
+          <entry key="HTML" value="20" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="1" />
           <entry key="Python" value="34" />
@@ -47,16 +59,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="24" />
-          <entry key="html" value="1496" />
-          <entry key="py" value="4270" />
+          <entry key="html" value="3427" />
+          <entry key="py" value="5312" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="24" />
           <entry key="DjangoUrlPath" value="1" />
-          <entry key="HTML" value="1496" />
-          <entry key="Python" value="4269" />
+          <entry key="HTML" value="3427" />
+          <entry key="Python" value="5311" />
         </counts>
       </usages-collector>
     </session>
@@ -66,8 +78,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="38" column="88" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
+            <state relative-caret-position="127">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/expense.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/deposit.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -75,26 +114,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenseApp/templates/registration/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+            <state relative-caret-position="481">
+              <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="10" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/transaction.html">
+        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
-              <caret line="10" column="15" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
+              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -102,8 +141,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenseApp/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
+            <state relative-caret-position="150">
+              <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -111,52 +153,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/expenseApp/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
+            <state relative-caret-position="182">
+              <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
-                <marker date="1540396187360" expanded="true" signature="878:1931" ph="..." />
-                <marker date="1540396187360" expanded="true" signature="3038:3043" ph="..." />
+                <marker date="1540584103843" expanded="true" signature="907:1607" ph="..." />
+                <marker date="1540584103843" expanded="true" signature="3140:3145" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expenseApp/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-              <folding>
-                <element signature="e#0#61#0" expanded="true" />
-                <marker date="1540395890330" expanded="true" signature="123:128" ph="..." />
-                <marker date="1540395890330" expanded="true" signature="281:361" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/expenseApp/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12">
-              <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+            <state relative-caret-position="432">
+              <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
-                <marker date="1540395958064" expanded="true" signature="379:384" ph="..." />
-                <marker date="1540395958064" expanded="true" signature="996:1001" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/expenseApp/admin.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1540587152428" expanded="true" signature="379:384" ph="..." />
+                <marker date="1540587152428" expanded="true" signature="1046:1051" ph="..." />
               </folding>
             </state>
           </provider>
@@ -181,22 +197,24 @@
       <list>
         <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/base..html" />
         <option value="$PROJECT_DIR$/expenseApp/static/css/index.css" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html" />
         <option value="$PROJECT_DIR$/expenseTracker/urls.py" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/registration/login.html" />
         <option value="$PROJECT_DIR$/expenseTracker/settings.py" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/expenseApp/migrations/0008_auto_20181022_1933.py" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html" />
         <option value="$PROJECT_DIR$/expenseApp/admin.py" />
-        <option value="$PROJECT_DIR$/expenseApp/forms.py" />
-        <option value="$PROJECT_DIR$/expenseApp/models.py" />
-        <option value="$PROJECT_DIR$/expenseApp/views.py" />
-        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html" />
         <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/transaction.html" />
         <option value="$PROJECT_DIR$/expenseApp/urls.py" />
+        <option value="$PROJECT_DIR$/expenseApp/forms.py" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html" />
+        <option value="$PROJECT_DIR$/expenseApp/views.py" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html" />
+        <option value="$PROJECT_DIR$/expenseApp/models.py" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/deposit.html" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/expense.html" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/registration/login.html" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html" />
+        <option value="$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html" />
       </list>
     </option>
   </component>
@@ -222,7 +240,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -236,10 +253,24 @@
               <item name="project3-django-jpark1914" type="462c0819:PsiDirectoryNode" />
               <item name="expenseApp" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="project3-django-jpark1914" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project3-django-jpark1914" type="462c0819:PsiDirectoryNode" />
+              <item name="expenseApp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="project3-django-jpark1914" type="b2602c69:ProjectViewProjectNode" />
+              <item name="project3-django-jpark1914" type="462c0819:PsiDirectoryNode" />
+              <item name="expenseApp" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="expenseApp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -274,6 +305,35 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="models" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project3-django-jpark1914" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/expenseApp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/expenseApp/models.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.models" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -291,12 +351,12 @@
     <frame x="0" y="25" width="800" height="824" extended-state="4" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.2992278" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.1724138" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3299712" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -304,8 +364,9 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.3299712" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32708934" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.43804035" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="11" weight="0.3299712" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -374,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="86" selection-start-line="4" selection-start-column="86" selection-end-line="4" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expenseTracker/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -392,27 +446,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="121" column="24" selection-start-line="121" selection-start-column="24" selection-end-line="121" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="15" lean-forward="true" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" lean-forward="true" selection-start-column="36" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -445,32 +478,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/expenseApp/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
+        <state relative-caret-position="60">
           <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/registration/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="38" column="88" selection-start-line="38" selection-start-column="88" selection-end-line="38" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -481,46 +493,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="28" lean-forward="true" selection-start-column="28" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/expenseApp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="55" column="15" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-            <marker date="1540396187360" expanded="true" signature="878:1931" ph="..." />
-            <marker date="1540396187360" expanded="true" signature="3038:3043" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/expenseApp/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        <state relative-caret-position="285">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
           <folding>
             <element signature="e#0#61#0" expanded="true" />
-            <marker date="1540395890330" expanded="true" signature="123:128" ph="..." />
-            <marker date="1540395890330" expanded="true" signature="281:361" ph="..." />
+            <marker date="1540571716141" expanded="true" signature="123:128" ph="..." />
+            <marker date="1540571716141" expanded="true" signature="425:674" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/registration/logged_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/expenseApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12">
-          <caret line="19" column="66" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="66" />
+        <state relative-caret-position="432">
+          <caret line="34" column="63" selection-start-line="34" selection-start-column="63" selection-end-line="34" selection-end-column="63" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-            <marker date="1540395958064" expanded="true" signature="379:384" ph="..." />
-            <marker date="1540395958064" expanded="true" signature="996:1001" ph="..." />
+            <marker date="1540587152428" expanded="true" signature="379:384" ph="..." />
+            <marker date="1540587152428" expanded="true" signature="1046:1051" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="40" column="75" selection-start-line="40" selection-start-column="75" selection-end-line="40" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+            <marker date="1540584103843" expanded="true" signature="907:1607" ph="..." />
+            <marker date="1540584103843" expanded="true" signature="3140:3145" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="55" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="36" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/deposit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/expense.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="42" column="63" selection-start-line="42" selection-start-column="63" selection-end-line="42" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/newUser.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/expenseApp/templates/expenseApp/create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
         </state>
       </provider>
     </entry>

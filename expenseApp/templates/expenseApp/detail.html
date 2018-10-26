@@ -1,10 +1,29 @@
 {% extends 'expenseApp/base.html' %}
 
 {% block content %}
+<div>
+ <div class="row justify-content-center">
+   <a href="{% url 'edit' pk=theModel.pk %}"><button class="btn-outline-danger btn">Edit</button></a>
+ </div>
+ <div class="row justify-content-center">
+   <h1>{{theModel.account_name}}</h1>
+ </div>
+ <div class="row justify-content-center">
+   <h2>${{theModel.balance}}</h2>
+ </div>
+ <div>
+  <table>
+   </table>
+ {% for item in user_account %}
+ <ul>
+  <li>Transaction Date: {{item.time_of_transaction}}</li>
+  <li>Amount: {{item.amount}}</li>
+  <li>Trans Type: {{item.transaction}}</li>
+ </ul>
+ {% endfor %}
 
- <a href="{% url 'edit' pk=theModel.pk %}"><button class="btn-outline-danger btn">Edit</button></a>
-<h1>{{theModel.account_name}}</h1>
-<p>{{theModel.balance}}</p>
-<p>{{theModel.emergency_fund_status}}</p>
+ </div>
+</div>
 
 {% endblock %}
+

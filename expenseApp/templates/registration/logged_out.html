@@ -1,10 +1,14 @@
 {% extends "expenseApp/base.html" %}
 
 {% block content %}
-
-
-<p>Logged out!</p>
-<a href="{% url 'login'%}">Click here to login again.</a>
-<a href="{% url 'index'%}">Back to Home.</a>
+<div class="container">
+    <div class="row justify-content-center">
+    <p>Logged out!</p>
+    </div>
+    <div class="row justify-content-center">
+    <a class="col-4 offset-2" href="{% url 'login'%}"><button class="btn btn btn-outline-warning">Click here to login again.</button></a>
+    <a class="col-4" href="{% url 'index'%}"><button class="btn btn-outline-primary">Back to Home.</button></a>
+    <div/>
+</div>
 
 {% endblock %}
