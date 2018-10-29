@@ -3,7 +3,7 @@
 {% block content %}
 <div>
  <div class="row justify-content-center">
-   <a href="{% url 'edit' pk=theModel.pk %}"><button class="btn-outline-danger btn">Edit</button></a>
+   <a href="{% url 'edit' pk=theModel.pk %}"><button class="btn-outline-danger btn">Edit Account Name</button></a>
  </div>
  <div class="row justify-content-center">
    <h1>{{theModel.account_name}}</h1>
@@ -17,9 +17,10 @@
  {% for item in user_account %}
  <ul>
   <li>Transaction Date: {{item.time_of_transaction}}</li>
-  <li>Amount: {{item.amount}}</li>
+  <li>Amount: ${{item.amount}}</li>
   <li>Trans Type: {{item.transaction}}</li>
  </ul>
+  <hr/>
  {% endfor %}
 
  </div>

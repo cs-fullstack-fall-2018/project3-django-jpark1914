@@ -1,0 +1,22 @@
+{% extends  'expenseApp/base.html'%}
+{% load static %}
+
+
+.container{
+    background: url(/static/expenseApp/images/rawpixel-602154-unsplash.jpg) fixed no-repeat ;
+    background-color: #dadee8;
+    padding: 3em;
+    color: #000000
+}
+.jumbotron{
+    background: url(/static/expenseApp/images/rawpixel-602154-unsplash.jpg) center no-repeat;
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+}
+
+.card-body{
+    background-color: #e0e0e0;
+}
+
+.row{
+    padding: .5em;
+}

@@ -4,10 +4,15 @@
 <link rel="stylesheet" href="{% static 'expenseApp/css/index.css' %}">
 
 
+
 {% block jumbotron %}
 <div class="jumbotron">
     <div class="row justify-content-center">
         <h1> Welcome to Your Expense Tracker!</h1>
+    </div>
+    <div class="row justify-content-center">
+        <a class="" href="{% url 'index'%}"><button class="btn btn-outline-primary">Back to Home.</button></a>
+        <a class="offset-2" href="{% url 'logout' %}"><button class="btn btn-outline-danger">Log Out</button></a>
     </div>
 
 </div>
@@ -21,24 +26,26 @@
         <h1>User: {{ user.get_username }}</h1>
     </div>
     <div class="row justify-content-center">
-        <a href="{% url 'create' %}"><button class="btn btn-primary">Add New Account</button></a>
+        <a href="{% url 'create' %}"><button class="btn btn-outline-primary">Add New Account</button></a>
     </div>
     <br/>
     <div class="row justify-content-center">
-        <a href="{% url 'logout' %}"><button class="btn btn-danger">Log Out</button></a>
+        <a href="{% url 'logout' %}"><button class="btn btn-outline-danger">Log Out</button></a>
     </div>
 
         {% if user_account %} <!-- Start If -->
 
 
         {% for item in user_account%} <!--Start For Loop -->
-
+    <div class="row">
         <a class="col-md-12" href="{%url 'detail' pk=item.pk%}"><h2>{{item.account_name}}</h2></a>
-        <h3 class="col-12">{{item.balance}}</h3>
+        <a class="col-md-12" href="{%url 'detail' pk=item.pk%}"><button class="btn btn-outline-primary">Check Statements</button></a>
+    </div>
+    <div class="row">
+        <h3 class="col-12">${{item.balance}}</h3>
         <a href="{% url 'deposit' pk=item.pk %}"><button class="btn btn-outline-success">Deposit</button> </a>
         <a href="{% url 'expense' pk=item.pk %}"><button class="btn btn-outline-danger">Expense</button> </a>
-
-        <hr/>
+    </div>
         {% endfor %} <!-- End For Loop -->
 
         {% endif %} <!--End 2nd If-->
